@@ -1,12 +1,20 @@
 "use client"
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction, FC } from 'react'
+import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Wallet, Waypoints } from 'lucide-react'
 
 const btnStyles = 'flex items-center gap-[5px] py-[5px] px-[10px] bg-[#C1D2BC] font-semibold text-[12px] md:text-[14px] lg:text-[16px]'
 
 
-const Bridge = ({ action, setNetwork }: { action: string, setNetwork: Dispatch<SetStateAction<boolean>> }) => {
+interface IProps {
+   action: string;
+   setNetwork?: Dispatch<SetStateAction<boolean>>;
+   setWallet: Dispatch<SetStateAction<boolean>>; 
+}
+
+const Bridge: FC<IProps> = ({ action, setNetwork }) => {
+   const path = usePathname()
 
 
   return (
@@ -20,14 +28,18 @@ const Bridge = ({ action, setNetwork }: { action: string, setNetwork: Dispatch<S
                   <Wallet className="text-[14px] md:text-[18px]" />
                   Connect Wallet
               </Button>
-              <Button 
-                variant="outline" 
-                className={`${btnStyles}`}
-                onClick={() => setNetwork(true)}
+              { path != "/usdc-bridge" &&  (
+                  <Button 
+                    variant="outline" 
+                    className={`${btnStyles}`}
+                    onClick={() => {
+                      if(typeof setNetwork != 'undefined') setNetwork(true)
+                    }}
                 >
                   <Waypoints className="text-[14px] md:text-[18px]" />
                   Select Network
-              </Button>
+                </Button>
+              ) }
             </aside>
           </header>
 

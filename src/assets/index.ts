@@ -1,0 +1,6 @@
+export { default as ether } from "./network-imgs/ethereum.png"
+export { default as bsc } from "./network-imgs/binance.png"
+export { default as polygon } from "./network-imgs/polygon.png"
+export { default as avalanche } from "./network-imgs/avalanche.png"
+export { default as solana } from "./network-imgs/solana.png"
+export { default as fantom } from "./network-imgs/fantom.png"

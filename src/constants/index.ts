@@ -1,4 +1,5 @@
 import { IFaqs } from "@/types"
+import { ether, bsc, polygon, avalanche, fantom, solana } from "@/assets"
 
 const faqs: IFaqs[] = [
     { 
@@ -34,13 +35,12 @@ const faqs: IFaqs[] = [
 ]
 
 const networks = [
-    { id: 0, logo: '', name: 'Ethereum', chainId: 0 },
-    { id: 1, logo: '', name: 'BSC', chainId: 0 },
-    { id: 2, logo: '', name: 'Polygon', chainId: 0 },
-    { id: 3, logo: '', name: 'Avalanche', chainId: 0 },
-    { id: 4, logo: '', name: 'Fantom', chainId: 0 },
-    { id: 5, logo: '', name: 'Solana', chainId: 0 },
-    { id: 6, logo: '', name: 'Aptos', chainId: 0 },
+    { id: 0, logo: ether, name: 'Ethereum', chainId: 0 },
+    { id: 1, logo: bsc, name: 'BSC', chainId: 0 },
+    { id: 2, logo: polygon, name: 'Polygon', chainId: 0 },
+    { id: 3, logo: avalanche, name: 'Avalanche', chainId: 0 },
+    { id: 4, logo: fantom, name: 'Fantom', chainId: 0 },
+    { id: 5, logo: solana, name: 'Solana', chainId: 0 },
 ]
 
 export { faqs, networks }
