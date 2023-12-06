@@ -1,4 +1,4 @@
-import { IFaqs } from "@/types"
+import { IFaqs, INetwork } from "@/types"
 import { ether, bsc, polygon, avalanche, fantom, solana } from "@/assets"
 
 const faqs: IFaqs[] = [
@@ -34,7 +34,7 @@ const faqs: IFaqs[] = [
     },
 ]
 
-const networks = [
+const networks: INetwork[] = [
     { id: 0, logo: ether, name: 'Ethereum', chainId: 0 },
     { id: 1, logo: bsc, name: 'BSC', chainId: 0 },
     { id: 2, logo: polygon, name: 'Polygon', chainId: 0 },

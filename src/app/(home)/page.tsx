@@ -22,7 +22,7 @@ export default function Home() {
 
       </main>
 
-      { showNetworks && <Networks setNetwork={setShowNetworks} /> }
+      { showNetworks && <Networks { ...{ showNetworks, setNetwork: setShowNetworks } } /> }
     </>
   )
 }
