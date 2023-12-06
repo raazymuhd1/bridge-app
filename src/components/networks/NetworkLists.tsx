@@ -14,6 +14,7 @@ const NetworkLists: FC<INetwork> = (network) => {
 
   return (
      <div 
+        data-testid="network"
         key={network.id}
         className="flex w-[130px] h-[100px] flex-col items-center cursor-pointer transition-opacity duration-[.4s] rounded-[10px] hover:border-[1px] p-[15px] hover:opacity-[0.8] hover:bg-[#c8bbbb]"
         onClick={() => setSelectedNetwork(network)}
